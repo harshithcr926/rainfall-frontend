@@ -7,7 +7,7 @@ import {
 } from "recharts";
 
 // ── CONFIG ─────────────────────────────────────────────────────────────────────
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "https://rainfall-backend-production.up.railway.app";
 
 const MODEL_COLORS = {
   "Random Forest":       "#22c55e",
@@ -299,7 +299,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState("predict");
 
   useEffect(() => {
-   fetch(`${API_BASE}/meta`)
+    fetch(`${API_BASE}/api/meta`)
       .then(r => r.json())
       .then(setMeta)
       .catch(() => setError("⚠️ Cannot connect to backend. Make sure Flask server is running on port 5000."));
@@ -311,7 +311,7 @@ export default function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_BASE}/predict`, {
+      const res = await fetch(`${API_BASE}/api/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(inputs),
