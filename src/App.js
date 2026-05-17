@@ -7,7 +7,7 @@ import {
 } from "recharts";
 
 // ── CONFIG ─────────────────────────────────────────────────────────────────────
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const MODEL_COLORS = {
   "Random Forest":       "#22c55e",
