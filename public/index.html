@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RainCast AI – Rainfall Forecast System</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #0f172a; }
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none; appearance: none;
+        width: 16px; height: 16px; border-radius: 50%;
+        background: #3b82f6; cursor: pointer;
+        box-shadow: 0 0 6px #3b82f688;
+      }
+      input[type=range]::-moz-range-thumb {
+        width: 16px; height: 16px; border-radius: 50%;
+        background: #3b82f6; cursor: pointer; border: none;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
