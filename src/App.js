@@ -3,7 +3,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   PieChart, Pie, Cell, Legend,
-  LineChart, Line, Area, AreaChart,
+  Area, AreaChart,
 } from "recharts";
 
 // ── CONFIG ─────────────────────────────────────────────────────────────────────
